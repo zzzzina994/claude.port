@@ -65,6 +65,7 @@ p{margin:0 0 1em;max-width:62ch}
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2rem 0 3rem}
 .gal{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2.5rem}
 .gal img,.single,.feat img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+.c:first-of-type .gal img{aspect-ratio:1/1}
 .single{max-width:560px;margin-top:1.5rem}
 .portrait{width:100%;max-width:420px;aspect-ratio:4/5;object-fit:cover;border-radius:10px;justify-self:center}
 .plain{padding-left:1.2rem}
