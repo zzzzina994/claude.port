@@ -52,13 +52,10 @@ p{margin:0 0 1em;max-width:62ch}
 .ribbon2{opacity:.5;animation:float 11s ease-in-out infinite}
 .ribbon2 path{stroke-width:2.5;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 12s ease-in-out infinite alternate}
 
-.mandala-wrap{position:absolute;z-index:0;right:clamp(1rem,5vw,6rem);top:50%;width:clamp(260px,38vw,520px);transform:translateY(-50%);pointer-events:none}
-.mandala{width:100%;height:auto;display:block;fill:none;stroke:url(#mg);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;animation:spin 140s linear infinite}
-.mandala circle,.mandala path{stroke-dasharray:1;stroke-dashoffset:1;fill:#e3a6c4;fill-opacity:0;animation:draw 3s ease-out forwards var(--d,0s),fillin 1.6s ease forwards calc(var(--d,0s) + 3s)}
+.sb{fill:#e3a6c4;stroke:var(--dark);stroke-width:1.6;opacity:0;transform-box:fill-box;transform-origin:center;animation:popin .7s cubic-bezier(.34,1.56,.64,1) forwards}
 
 @keyframes draw{to{stroke-dashoffset:0}}
-@keyframes fillin{to{fill-opacity:.14}}
-@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes popin{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 @keyframes rise{to{opacity:1;transform:none}}
 @keyframes grow{to{transform:scaleX(1)}}
@@ -109,7 +106,6 @@ p{margin:0 0 1em;max-width:62ch}
 .two,.three,.split{grid-template-columns:1fr}
 .portrait{max-width:340px;justify-self:start}
 .ribbon{opacity:.6}
-.mandala-wrap{opacity:.2;right:-4rem;width:320px}
 .s,.close,.contact{padding:4rem 0}
 }
 @media (max-width:620px){
@@ -119,13 +115,12 @@ p{margin:0 0 1em;max-width:62ch}
 .tl li::before{left:calc(-1.4rem - 7px)}
 .foot-in{flex-direction:column}
 .nav nav{gap:.2rem .9rem}
-.mandala-wrap{opacity:.16;width:260px}
 }
 @media (prefers-reduced-motion:reduce){
 html{scroll-behavior:auto}
-.ribbon,.ribbon2,.mandala,.card,.btn{animation:none;transition:none}
-.ribbon .thin,.ribbon2 path,.mandala circle,.mandala path{animation:none;stroke-dashoffset:0}
-.mandala circle,.mandala path{fill-opacity:.14}
+.ribbon,.ribbon2,.card,.btn{animation:none;transition:none}
+.ribbon .thin,.ribbon2 path{animation:none;stroke-dashoffset:0}
+.sb{animation:none;opacity:1}
 h1 span,h1 em{animation:none;opacity:1;transform:none}
 .nav::after{animation:none}
 }
