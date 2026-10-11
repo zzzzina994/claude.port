@@ -52,10 +52,7 @@ p{margin:0 0 1em;max-width:62ch}
 .ribbon2{opacity:.5;animation:float 11s ease-in-out infinite}
 .ribbon2 path{stroke-width:2.5;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 12s ease-in-out infinite alternate}
 
-.sb{fill:#e3a6c4;stroke:var(--dark);stroke-width:1.6;opacity:0;transform-box:fill-box;transform-origin:center;animation:popin .7s cubic-bezier(.34,1.56,.64,1) forwards}
-
 @keyframes draw{to{stroke-dashoffset:0}}
-@keyframes popin{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 @keyframes rise{to{opacity:1;transform:none}}
 @keyframes grow{to{transform:scaleX(1)}}
@@ -120,7 +117,6 @@ p{margin:0 0 1em;max-width:62ch}
 html{scroll-behavior:auto}
 .ribbon,.ribbon2,.card,.btn{animation:none;transition:none}
 .ribbon .thin,.ribbon2 path{animation:none;stroke-dashoffset:0}
-.sb{animation:none;opacity:1}
 h1 span,h1 em{animation:none;opacity:1;transform:none}
 .nav::after{animation:none}
 }
